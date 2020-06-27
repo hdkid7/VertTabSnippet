@@ -6,6 +6,9 @@
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "babel-jest": "^26.0.1",
     "babel-plugin-emotion": "^10.0.33",
     "browser-sync": "^2.26.7",
@@ -48,7 +51,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run format"
+      "pre-commit": "npm run format"
     }
   },
   "lint-staged": {
@@ -66,7 +69,8 @@
     "browsersync": "browser-sync start -s dist -f src",
     "webpackdev": "webpack --open --mode development --watch",
     "start": "concurrently 'npm run webpackdev'",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "format": "prettier --write src/*.js"
   },
   "keywords": [],
   "author": "",
