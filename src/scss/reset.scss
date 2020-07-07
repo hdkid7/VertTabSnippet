@@ -20,6 +20,11 @@ html {
  * Remove the margin in all browsers.
  */
 
+.arrow {
+  transition: transform 0.7s ease-in-out;
+  transform: rotate(0deg);
+}
+
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
