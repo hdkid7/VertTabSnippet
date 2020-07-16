@@ -5,7 +5,6 @@ import { jsx, css, keyframes } from "@emotion/core";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Transition } from "react-transition-group";
 
 // eslint-disable-next-line react/prop-types
 const Tab = ({ tabName, boolean, onClick }) => {
