@@ -51,11 +51,6 @@
     "style-loader": "^1.2.1",
     "webpack-dev-server": "^3.11.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run format"
-    }
-  },
   "lint-staged": {
     "*.+(js|jsx)": [
       "eslint --fix",
