@@ -25,7 +25,7 @@ const tabsContainer = css`
 `;
 
 const viewContainer = css`
-  background: #bebebe;
+  background: #cdcdcd;
   width: 25em;
   height: 26.8rem;
   margin-bottom: 1.2rem;
@@ -42,10 +42,10 @@ function objectMap(object, mapFn) {
   }, {});
 }
 const verticalTabsOmniArray = [
-  ["Hello1", "hello", "hello", "hello", "hello"],
-  ["Hello2", "hello", "hello", "hello", "hello"],
-  ["Hello3", "hello", "hello", "hello", "hello"],
-  ["Hello4", "hello", "hello", "hello", "hello"]
+  ["Hello1", "hello 1", "hello 1", "hello 1", "hello 1"],
+  ["Hello2", "hello 2", "hello 2", "hello 2", "hello2"],
+  ["Hello3", "hello3", "hello3", "hello3", "hello3"],
+  ["Hello4", "hello4", "hello4", "hello4", "hello4"]
 ];
 // eslint-disable-next-line no-undef
 const object = verticalTabsOmniArray.map(a =>
@@ -183,6 +183,7 @@ wrapper
         mobileContent={<MobileApp />}
         desktopContent={<DeskTopApp />}
       />,
+
       wrapper
     )
   : false;

@@ -8,7 +8,7 @@ const ViewBox = ({ title, paragraph, buttonText, buttonLink }) => {
   const [counter, setState] = useState(0);
 
   const viewContainer = css`
-    background: #bebebe;
+    background: #cdcdcd;
   `;
 
   const viewContent = css`
@@ -23,7 +23,7 @@ const ViewBox = ({ title, paragraph, buttonText, buttonLink }) => {
     <a href={buttonLink}>
       <button
         css={css`
-          background-color: gray;
+          background-color: grey;
           border: none;
           color: white;
           font-weight: 500;
@@ -32,6 +32,11 @@ const ViewBox = ({ title, paragraph, buttonText, buttonLink }) => {
           cursor: pointer;
           text-decoration: none;
           display: inline-block;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-color: #990000;
+          }
         `}
       >
         {buttonText}
@@ -52,7 +57,7 @@ const ViewBox = ({ title, paragraph, buttonText, buttonLink }) => {
         </h3>
         <p
           css={css`
-            color: #626262;
+            color: black;
             font-weight: bold;
           `}
         >

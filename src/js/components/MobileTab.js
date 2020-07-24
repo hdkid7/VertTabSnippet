@@ -27,7 +27,7 @@ const MobileTab = ({
       margin-bottom: 1.2rem;
       height:4.4rem;
       width: 21em;
-      background: #bebebe;
+      background: #CDCDCD;
 
       cursor: pointer;}
     to{ display: flex;
@@ -37,7 +37,7 @@ const MobileTab = ({
       width: 21em;
       height:30rem;
       margin-right:0em;
-      background: #bebebe;}
+      background: #CDCDCD;
 
 
   `;
@@ -67,6 +67,11 @@ const MobileTab = ({
           text-decoration: none;
           display: inline-block;
           margin-top: 1em;
+          transition: all 0.5s ease-in-out;
+
+          &:hover {
+            background-color: #990000;
+          }
         `}
       >
         {buttonText}
@@ -90,7 +95,7 @@ const MobileTab = ({
     margin-bottom: 1.2rem;
     height: 25rem;
     width: 21em;
-    background: #bebebe;
+    background: #cdcdcd;
 
     animation: ${activeTabAnimation} 0.6s ease-in-out 1;
     animation-fill-mode: forwards;
@@ -108,7 +113,6 @@ const MobileTab = ({
 
   return (
     <div
-      onClick={onClick}
       css={
         boolean
           ? activeTab
@@ -119,7 +123,7 @@ const MobileTab = ({
               margin-bottom: 1.2rem;
               width: 21em;
               height: 4.4rem;
-              background: #bebebe;
+              background: #cdcdcd;
 
               cursor: pointer;
               position: relative;
@@ -127,6 +131,7 @@ const MobileTab = ({
       }
     >
       <div
+        onClick={onClick}
         css={css`
           height: 4.5rem;
           justify-content: center;
@@ -143,13 +148,23 @@ const MobileTab = ({
         `}
       >
         <p
-          css={css`
-            font-size: 1rem;
-            margin-left: 1em;
-            font-weight: bold;
-            width: 16em;
-            color: #626262;
-          `}
+          css={
+            boolean
+              ? css`
+                  color: #990000;
+                  font-size: 1rem;
+                  margin-left: 1em;
+                  font-weight: bold;
+                  width: 16em;
+                `
+              : css`
+                  font-size: 1rem;
+                  margin-left: 1em;
+                  font-weight: bold;
+                  width: 16em;
+                  color: black;
+                `
+          }
         >
           {tabName}
         </p>
